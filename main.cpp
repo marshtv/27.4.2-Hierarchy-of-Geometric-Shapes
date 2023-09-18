@@ -127,8 +127,8 @@ class Square: public Shape {
 		this->side = in_side;
 		this->color = colors::BLUE;
 		this->highlight = new Highlight(in_pos_x, in_pos_y,
-										std::sqrt(in_side * in_side + in_side * in_side) + 0.01,
-										std::sqrt(in_side * in_side + in_side * in_side) + 0.01);
+						std::sqrt(in_side * in_side + in_side * in_side) + 0.01,
+						std::sqrt(in_side * in_side + in_side * in_side) + 0.01);
 	}
 
 	double getSide() {
@@ -154,8 +154,8 @@ class Rectangle: public Shape {
 		this->height = in_height;
 		this->color = colors::WHITE;
 		this->highlight = new Highlight(in_pos_x, in_pos_y,
-										std::sqrt(in_width * in_width + in_height * in_height) + 0.01,
-										std::sqrt(in_width * in_width + in_height * in_height) + 0.01);
+						std::sqrt(in_width * in_width + in_height * in_height) + 0.01,
+						std::sqrt(in_width * in_width + in_height * in_height) + 0.01);
 	}
 
 	double getWidth() {
