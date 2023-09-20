@@ -216,7 +216,8 @@ int main() {
 				<< '"' << "square" << '"' << ", " << '"' << "rectangle" << '"'
 				<< '"' << "exit" << '"' << " - for exit program." << std::endl;
 	std::cout << "-------------------------------------------" << std::endl;
-	while (inputCommand() != "exit") {
+	while (true) {
+		std::string command = inputCommand();
 		std::cout << "-------------------------------------------" << std::endl;
 		double in_pos_x, in_pos_y;
 		if (command == "circle") {
@@ -231,8 +232,7 @@ int main() {
 			circle->highlight->showInfo();
 
 			delete circle;
-		}
-		if (command == "triangle") {
+		} else if (command == "triangle") {
 			inputPosition(in_pos_x, in_pos_y);
 			std::cout << "Input side:";
 			double in_side;
@@ -244,8 +244,7 @@ int main() {
 			triangle->highlight->showInfo();
 
 			delete triangle;
-		}
-		if (command == "square") {
+		} else if (command == "square") {
 			inputPosition(in_pos_x, in_pos_y);
 			std::cout << "Input side:";
 			double in_side;
@@ -257,8 +256,7 @@ int main() {
 			square->highlight->showInfo();
 
 			delete square;
-		}
-		if (command == "rectangle") {
+		} else if (command == "rectangle") {
 			inputPosition(in_pos_x, in_pos_y);
 			std::cout << "Input width and height:";
 			double in_width, in_height;
@@ -270,7 +268,8 @@ int main() {
 			rectangle->highlight->showInfo();
 
 			delete rectangle;
-		}
+		} else if (command == "exit")
+			break;
 	}
 	std::cout << "-------------------------------------------" << std::endl;
 	std::cout << "Exit program. Good by." << std::endl;
