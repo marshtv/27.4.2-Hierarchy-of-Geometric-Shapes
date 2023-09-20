@@ -271,7 +271,6 @@ int main() {
 		} else if (command == "exit")
 			break;
 	}
-	std::cout << "-------------------------------------------" << std::endl;
 	std::cout << "Exit program. Good by." << std::endl;
 	
 	return 0;
