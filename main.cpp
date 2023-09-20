@@ -216,12 +216,8 @@ int main() {
 				<< '"' << "square" << '"' << ", " << '"' << "rectangle" << '"'
 				<< '"' << "exit" << '"' << " - for exit program." << std::endl;
 	std::cout << "-------------------------------------------" << std::endl;
-	std::string command = inputCommand();
-	while (!checkValidCommand(command)) {
-		command = inputCommand();
-	}
-	std::cout << "-------------------------------------------" << std::endl;
-	while (command != "exit") {
+	while (inputCommand() != "exit") {
+		std::cout << "-------------------------------------------" << std::endl;
 		double in_pos_x, in_pos_y;
 		if (command == "circle") {
 			inputPosition(in_pos_x, in_pos_y);
